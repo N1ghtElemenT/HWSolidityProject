@@ -1,0 +1,121 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "value",
+						"type": "uint256"
+					}
+				],
+				"name": "testFind",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "index",
+						"type": "uint256"
+					}
+				],
+				"name": "testRemove",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "arr",
+						"type": "uint256[]"
+					}
+				],
+				"name": "testSort",
+				"outputs": [
+					{
+						"internalType": "uint256[]",
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_2/ArrayUtils.sol": "ArrayUtils"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_2/ArrayUtils.sol": {
+			"keccak256": "0xb8d6436038eb4f2f8ac8af69a1f9ef2afcdbbbfac6364b9eb6379e2826a5f9ec",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://70731d6788781ef072c63f84a394d446bc74a5290b50797b1e44dc2833141a0c",
+				"dweb:/ipfs/QmbmSRzykEk9mXnVAKS4uKGbStKvxAFpz9iiHNb8CHmxyR"
+			]
+		},
+		"libs/HomeWork_libs2/ArrayLibrary.sol": {
+			"keccak256": "0xc17662b089e98eef2483e296b17d3853ed3944eba2b1d0cc580d8e703ae56211",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cc7fcbb409d8f7d0ad99cc1d9472eb8b1a6cf47423972e7a0000d33bc89b769c",
+				"dweb:/ipfs/QmRiT8UmXY8VkCvuqSmvFBXXS7qBpn2cnmwzSvAnhsZRdx"
+			]
+		}
+	},
+	"version": 1
+}
