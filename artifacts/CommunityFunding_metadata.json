@@ -1,0 +1,137 @@
+{
+	"compiler": {
+		"version": "0.8.0+commit.c7dfd78e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [],
+				"name": "distributeFunds",
+				"outputs": [],
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "getProjects",
+				"outputs": [
+					{
+						"components": [
+							{
+								"internalType": "string",
+								"name": "description",
+								"type": "string"
+							},
+							{
+								"internalType": "uint256",
+								"name": "requiredAmount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "uint256",
+								"name": "voteCount",
+								"type": "uint256"
+							},
+							{
+								"internalType": "address",
+								"name": "creator",
+								"type": "address"
+							}
+						],
+						"internalType": "struct CommunityFunding.Project[]",
+						"name": "",
+						"type": "tuple[]"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_description",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "_requiredAmount",
+						"type": "uint256"
+					}
+				],
+				"name": "proposeProject",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "_index",
+						"type": "uint256"
+					}
+				],
+				"name": "voteForProject",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_1/CommunityFunding.sol": "CommunityFunding"
+		},
+		"evmVersion": "berlin",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": true,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_1/CommunityFunding.sol": {
+			"keccak256": "0xd9226ab6054423e7920b6a7b9a4b2773c19d39683f0ba5ace0e57842583a938b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5e5f7aa6d6e25f055d183f63fa0590827e47619d04775ff93206b52ce9582d8d",
+				"dweb:/ipfs/QmbVDXEx9PUgmkgKXWAZpr8D1z8WAk9nqXsLCQdMts3he2"
+			]
+		}
+	},
+	"version": 1
+}

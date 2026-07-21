@@ -1,0 +1,50 @@
+{
+  "contracts/HomeWork_1/CommunityFunding.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/CommunityFunding.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract CommunityFunding {\n    struct Project {\n        string description;\n        uint256 requiredAmount;\n        uint256 voteCount;\n        address creator;\n    }\n\n    Project[] private projects;\n    mapping(address => mapping(uint256 => bool)) private hasVoted;\n    address public owner;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function proposeProject(string memory _description, uint256 _requiredAmount) public {\n        projects.push(Project(_description, _requiredAmount, 0, msg.sender));\n    }\n\n    function voteForProject(uint256 _index) public {\n        require(_index < projects.length, \"CommunityFunding: project does not exist\");\n        require(!hasVoted[msg.sender][_index], \"CommunityFunding: already voted for this project\");\n        hasVoted[msg.sender][_index] = true;\n        projects[_index].voteCount++;\n    }\n\n    function distributeFunds() public payable {\n        require(msg.sender == owner, \"CommunityFunding: only owner can distribute funds\");\n        uint256 totalVotes = 0;\n        for (uint256 i = 0; i < projects.length; i++) {\n            totalVotes += projects[i].voteCount;\n        }\n\n        require(totalVotes > 0, \"CommunityFunding: no votes cast\");\n\n        for (uint256 i = 0; i < projects.length; i++) {\n            if (projects[i].voteCount > 0) {\n                uint256 amount = (msg.value * projects[i].voteCount) / totalVotes;\n                payable(projects[i].creator).transfer(amount);\n            }\n        }\n    }\n\n    function getProjects() public view returns (Project[] memory) {\n        return projects;\n    }\n}",
+        "file": "contracts/HomeWork_1/CommunityFunding.sol"
+      }
+    }
+  },
+  "contracts/HomeWork_1/VotingSystem.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/VotingSystem.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract VotingSystem {\n    struct Candidate {\n        string name;\n        uint256 voteCount;\n    }\n\n    Candidate[] private candidates;\n    mapping(address => bool) private hasVoted;\n\n    function addCandidate(string memory _name) public {\n        candidates.push(Candidate(_name, 0));\n    }\n\n    function vote(uint256 _index) public {\n        require(_index < candidates.length, \"VotingSystem: candidate does not exist\");\n        require(!hasVoted[msg.sender], \"VotingSystem: already voted\");\n        hasVoted[msg.sender] = true;\n        candidates[_index].voteCount++;\n    }\n\n    function getResults() public view returns (Candidate[] memory) {\n        return candidates;\n    }\n}",
+        "file": "contracts/HomeWork_1/VotingSystem.sol"
+      }
+    }
+  },
+  "contracts/HomeWork_1/TaskManager.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/TaskManager.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract TaskManager {\n    string[] private tasks;\n\n    function addTask(string memory _task) public {\n        tasks.push(_task);\n    }\n\n    function removeTask(uint256 _index) public {\n        require(_index < tasks.length, \"TaskManager: index out of bounds\");\n        tasks[_index] = tasks[tasks.length - 1];\n        tasks.pop();\n    }\n\n    function getTasks() public view returns (string[] memory) {\n        return tasks;\n    }\n}",
+        "file": "contracts/HomeWork_1/TaskManager.sol"
+      }
+    }
+  },
+  "contracts/HomeWork_1/SubscriptionService.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/SubscriptionService.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract SubscriptionService {\n    uint256 public subscriptionPrice;\n    uint256 public subscriptionDuration;\n    address public owner;\n\n    struct Subscription {\n        address user;\n        uint256 endTime;\n    }\n\n    Subscription[] private subscriptions;\n    mapping(address => bool) private isActive;\n\n    constructor(uint256 _price, uint256 _duration) {\n        owner = msg.sender;\n        subscriptionPrice = _price;\n        subscriptionDuration = _duration;\n    }\n\n    function subscribe() public payable {\n        require(msg.value >= subscriptionPrice, \"SubscriptionService: insufficient funds\");\n        uint256 endTime = block.timestamp + subscriptionDuration;\n        subscriptions.push(Subscription(msg.sender, endTime));\n        isActive[msg.sender] = true;\n    }\n\n    function checkSubscription(address _user) public view returns (bool) {\n        for (uint256 i = 0; i < subscriptions.length; i++) {\n            if (subscriptions[i].user == _user && subscriptions[i].endTime > block.timestamp) {\n                return true;\n            }\n        }\n        return false;\n    }\n\n    function updateSubscriptionPrice(uint256 _newPrice) public {\n        require(msg.sender == owner, \"SubscriptionService: only owner can update price\");\n        subscriptionPrice = _newPrice;\n    }\n}",
+        "file": "contracts/HomeWork_1/SubscriptionService.sol"
+      }
+    }
+  },
+  "contracts/HomeWork_1/ProductShop.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/ProductShop.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract ProductShop {\n    struct Product {\n        string name;\n        uint256 price;\n    }\n\n    Product[] private products;\n    address public owner;\n\n    constructor() {\n        owner = msg.sender;\n    }\n\n    function addProduct(string memory _name, uint256 _price) public {\n        require(msg.sender == owner, \"ProductShop: only owner can add products\");\n        products.push(Product(_name, _price));\n    }\n\n    function buyProduct(uint256 _index) public payable {\n        require(_index < products.length, \"ProductShop: product does not exist\");\n        require(msg.value >= products[_index].price, \"ProductShop: insufficient funds\");\n        payable(owner).transfer(products[_index].price);\n    }\n\n    function getProducts() public view returns (Product[] memory) {\n        return products;\n    }\n}",
+        "file": "contracts/HomeWork_1/ProductShop.sol"
+      }
+    }
+  },
+  "contracts/HomeWork_1/Counter.sol": {
+    "__sources__": {
+      "contracts/HomeWork_1/Counter.sol": {
+        "content": "// SPDX-License-Identifier: MIT\npragma solidity ^0.8.0;\n\ncontract Counter {\n    uint256 private counter;\n\n    function increment() public {\n        counter++;\n    }\n\n    function decrement() public {\n        require(counter > 0, \"Counter: cannot decrement below zero\");\n        counter--;\n    }\n\n    function getCounter() public view returns (uint256) {\n        return counter;\n    }\n}",
+        "file": "contracts/HomeWork_1/Counter.sol"
+      }
+    }
+  }
+}
