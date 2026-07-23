@@ -1,0 +1,235 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"stateMutability": "nonpayable",
+				"type": "constructor"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "completeQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "rewardGold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "levelReq",
+						"type": "uint256"
+					}
+				],
+				"name": "createQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "getReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "globalQuests",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "rewardGold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "levelRequirement",
+						"type": "uint256"
+					},
+					{
+						"internalType": "bool",
+						"name": "exists",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "playerGold",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "playerLevels",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "playerQuests",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "isActive",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "isCompleted",
+						"type": "bool"
+					},
+					{
+						"internalType": "bool",
+						"name": "rewardClaimed",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "startQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_3/QuestManager.sol": "QuestManager"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_3/IQuest.sol": {
+			"keccak256": "0xf0af6b8f1318f186137b8804d6e5ced192e3d5a5079a1115f106d9e4d0bab8e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5fc5864ce20f7757c1574cc666517cc7ec50d35739971d041340cd7e99ec2a5a",
+				"dweb:/ipfs/QmT5SLcZKEj9zYJDeWMuppoGWge4HNaECxxEqbBKe6wwcw"
+			]
+		},
+		"contracts/HomeWork_3/QuestManager.sol": {
+			"keccak256": "0x1911f8feaafd8d09bc546c48d7e182cc760648a2834062bdb1d14e460d6b6187",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8bcca2f177e53707ee4a0b071018126a21f758042e3b7f68ed581cd23e883d0d",
+				"dweb:/ipfs/Qmdfnn8xJnK3WJL9PYCFNnEQikHuZkkMPtcArhrADQDLKz"
+			]
+		}
+	},
+	"version": 1
+}

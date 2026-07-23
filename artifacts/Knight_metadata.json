@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "guildMembers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "subclass",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "joinGuild",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_3/Knight.sol": "Knight"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_3/Knight.sol": {
+			"keccak256": "0x896a17048a08b4575eaf160f82188ae7e756fc9eb06224c0339150262c8e624a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5d5ec69be058c39e3edd8bbff7125914b635e6aec04b4507ebdaaa421d1dcd02",
+				"dweb:/ipfs/QmY6q1cUZg44PCSBnwkD6aDVRXvmBcLKLVJ9keHKcYkn8v"
+			]
+		},
+		"contracts/HomeWork_3/WarriorGuild.sol": {
+			"keccak256": "0x986ffc0b277ed207f7573ee30a672818fc1da084723c5b4ae87bac11ba71092f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c51e7628e1c47ff3e9665c4c646fd4339b5e293b72d6a3661143c6855021068c",
+				"dweb:/ipfs/QmR629MNGToneHMBAAogfmT8NaT8VRmixUYRG1GXqcaSea"
+			]
+		}
+	},
+	"version": 1
+}

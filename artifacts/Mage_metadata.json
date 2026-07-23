@@ -1,0 +1,114 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "attack",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					},
+					{
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "guildMembers",
+				"outputs": [
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"internalType": "string",
+						"name": "subclass",
+						"type": "string"
+					},
+					{
+						"internalType": "bool",
+						"name": "isRegistered",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "joinGuild",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_3/Mage.sol": "Mage"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_3/Mage.sol": {
+			"keccak256": "0x8845a2e9d08eb26c01f7ee442358ba89d4218e9830c08abf45d22ac8bfb557ea",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc26155560acf8bd773888eb1bdf2caeec04b84de8c11380dc299608bf7f7563",
+				"dweb:/ipfs/QmNPgoMBpCHpyAPLxZ8Xs38z5RLD3ari4DyVCdtj5jdgKZ"
+			]
+		},
+		"contracts/HomeWork_3/WarriorGuild.sol": {
+			"keccak256": "0x986ffc0b277ed207f7573ee30a672818fc1da084723c5b4ae87bac11ba71092f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c51e7628e1c47ff3e9665c4c646fd4339b5e293b72d6a3661143c6855021068c",
+				"dweb:/ipfs/QmR629MNGToneHMBAAogfmT8NaT8VRmixUYRG1GXqcaSea"
+			]
+		}
+	},
+	"version": 1
+}

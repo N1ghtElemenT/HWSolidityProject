@@ -1,0 +1,85 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "completeQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "getReward",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "questId",
+						"type": "uint256"
+					}
+				],
+				"name": "startQuest",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_3/IQuest.sol": "IQuest"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_3/IQuest.sol": {
+			"keccak256": "0xf0af6b8f1318f186137b8804d6e5ced192e3d5a5079a1115f106d9e4d0bab8e7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5fc5864ce20f7757c1574cc666517cc7ec50d35739971d041340cd7e99ec2a5a",
+				"dweb:/ipfs/QmT5SLcZKEj9zYJDeWMuppoGWge4HNaECxxEqbBKe6wwcw"
+			]
+		}
+	},
+	"version": 1
+}

@@ -1,0 +1,128 @@
+{
+	"compiler": {
+		"version": "0.8.34+commit.80d5c536"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "players",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "energy",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "gold",
+						"type": "uint256"
+					},
+					{
+						"internalType": "uint256",
+						"name": "level",
+						"type": "uint256"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "registerPlayer",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "address[]",
+						"name": "party",
+						"type": "address[]"
+					},
+					{
+						"internalType": "uint256",
+						"name": "totalEnergyPool",
+						"type": "uint256"
+					}
+				],
+				"name": "shareEnergy",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256",
+						"name": "itemCost",
+						"type": "uint256"
+					}
+				],
+				"name": "spendAllGoldOnItems",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "upgradeSkills",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"contracts/HomeWork_3/ResourceManager.sol": "ResourceManager"
+		},
+		"evmVersion": "osaka",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"contracts/HomeWork_3/ResourceManager.sol": {
+			"keccak256": "0x1bae5f77e8703c1e997ea47d8ec249842d60702abb5c0c03a064fe730267758f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://c1a281cf8108a8a9129c3f1cbe57de5d5100ae37e32b66e20ec75dcb60fddf98",
+				"dweb:/ipfs/QmcuSFBMZ6MrPJdPoeP6qyw7jmEifCDA6xQqi7bf2wLxhb"
+			]
+		},
+		"libs/HomeWork_libs3/ResourceUtils.sol": {
+			"keccak256": "0xde653364fa620f374a3f170c6c0ea16c0d249dc4b57a9e9a01c636a4a6e49a25",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8781fadaf3f713e9008dcc5b2d6a98231d0c3aabd09e2c0deb06b54767efe7cf",
+				"dweb:/ipfs/QmQzETkCJgzmv6gXZAQFvPJRv5R2KeZG8oqwhk4iDPsV8D"
+			]
+		}
+	},
+	"version": 1
+}
